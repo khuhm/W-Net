@@ -15,4 +15,4 @@
 * To obtain the full resolution result images, run test_fullres.py
 
 ## Reference
- Kwang-Hyun Uhm ; Seung-Wook Kim ; Seo-Won Ji ; Sung-Jin Cho ; Jun-Pyo Hong ; Sung-Jea Ko, "W-Net: Two-Stage U-Net With Misaligned Data for Raw-to-RGB Mapping," 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW), Seoul, Korea (South), 2019, pp. 3636-3642. [link](https://ieeexplore.ieee.org/document/9022089)
+ Kwang-Hyun Uhm, Seung-Wook Kim, Seo-Won Ji, Sung-Jin Cho, Jun-Pyo Hong, and Sung-Jea Ko, "W-Net: Two-Stage U-Net With Misaligned Data for Raw-to-RGB Mapping," 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW), Seoul, Korea (South), 2019, pp. 3636-3642. [link](https://ieeexplore.ieee.org/document/9022089)
