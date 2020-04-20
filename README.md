@@ -7,7 +7,7 @@
 ## Run inference on ZRR test images
 1. Set argument 'raw_dir' to the directory containing input raw images
 
-2. Download the pretrained models in here, and place them under the folder named "trained_model"
+2. Download the pretrained models in [here](https://drive.google.com/drive/folders/1eH_prE7EWEUqxJes5IfHTdsFyqP64o7w?usp=sharing), and place them under the folder named "trained_model"
 
 * To obtain the result images of 'fidelity track', run test.py
 
