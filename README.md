@@ -11,6 +11,5 @@
 
 * To obtain the result images of 'fidelity track', run test.py
 
-* To obtain the result images of 'perceptual track', run test_perceptual.py
 
 * To obtain the full resolution result images, run test_fullres.py
