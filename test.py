@@ -17,7 +17,7 @@ def test():
     parser.add_argument('--raw_dir', type=str, default='/data/raw_to_rgb/TestingPhoneRaw/')
     parser.add_argument('--rgb_dir', type=str, default=None)
     parser.add_argument('--batch_size', type=int, default=1)
-    parser.add_argument('--weights_path', type=str, default='trained_model/Perceptual_relu4_1_Hue_159/finetune/model_0.net')
+    parser.add_argument('--weights_path', type=str, default=None)
     parser.add_argument('--save_folder', type=str, default='fidelity_result_images/')
     args = parser.parse_args()
     print(args)
@@ -32,14 +32,14 @@ def test():
 
     # load weights
     model.load_state_dict(
-        load('trained_model/Perceptual_conv4_2/finetune_110_two_stage_finetune/model_1.net')['state_dict'])
+        load('trained_model/p4_2_second.net')['state_dict'])
     model.eval()
     model.cuda()
 
     model_first = CAUNet()
     model_first.eval()
     model_first.cuda()
-    model_first.load_state_dict(load('trained_model/Perceptual_conv4_2/finetune_110/model_0.net'))
+    model_first.load_state_dict(load('trained_model/p4_2.net'))
 
     second_model_front = CAUNet(in_channels=4)
     second_model_last = CAUNet(in_channels=3)
@@ -48,16 +48,16 @@ def test():
     second_model_front.cuda()
     second_model_last.cuda()
     second_model_front.load_state_dict(
-        load('trained_model/Perceptual_relu4_1_Hue_145/finetune_lr_reset/model_7.net')['state_dict'])
+        load('trained_model/p4_1_hue.net')['state_dict'])
     second_model_last.load_state_dict(
-        load('trained_model/Perceptual_relu4_1_Hue_145/finetune_lr_reset_two_stage_ep20_finetune_resume/model_0.net')[
+        load('trained_model/p4_1_hue_second.net')[
             'state_dict'])
 
     third_model_front = CAUNet(in_channels=4)
     third_model_front.eval()
     third_model_front.cuda()
     third_model_front.load_state_dict(
-        load('trained_model/Perceptual_relu_5_1_hue/model_1.pkl')['state_dict'])
+        load('trained_model/p5_1_hue.pkl')['state_dict'])
 
     # save folder
     save_folder = args.save_folder

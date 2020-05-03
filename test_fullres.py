@@ -16,9 +16,9 @@ def test_fullres():
     parser.add_argument('--rgb_dir', type=str, default=None)
     parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--first_weights_path', type=str,
-                        default='trained_model/Perceptual_conv4_2/finetune_110/model_0.net')
+                        default='trained_model/p4_2.net')
     parser.add_argument('--second_weights_path', type=str,
-                        default='trained_model/Perceptual_conv4_2/finetune_110_two_stage_finetune/model_1.net')
+                        default='trained_model/p4_2_second.net')
     parser.add_argument('--save_folder', type=str, default='Full_Results/')
     args = parser.parse_args()
     print(args)
